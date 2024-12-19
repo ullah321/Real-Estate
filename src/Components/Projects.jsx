@@ -31,9 +31,9 @@ const Projects = () => {
 
   return (
     <motion.div
-        initial={{ opacity: 0, x: 200 }}
+        initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 1 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false }}
         className="w-full container mx-auto py-4 pt-20 my-20 overflow-hidden px-6 md:px-20 lg:px-32" id="Projects">
       <h1 className="text-2xl sm:text-4xl font-bold mb-3 text-center">Projects <span className="underline underline-offset-4 decoration-1 under font-light">Completed</span></h1>

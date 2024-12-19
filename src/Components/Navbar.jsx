@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import {assets} from '../Components/assets/assets';
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -25,14 +26,14 @@ const Navbar = () => {
 
 
   return (
-    <div className='absolute top-0 left-0 w-full z-10'>
-      <nav className={`${sticky ? 'dark-nav' : ''} fixed w-full mx-auto flex justify-between items-center py-6 px-6 md:px-20 lg:px-20`}>
+    <div className=' absolute top-0 left-0 w-full z-10'>
+      <nav className={`${sticky ? 'dark-nav' : ''} navbar fixed w-full mx-auto flex justify-between items-center py-6 px-6 md:px-20 lg:px-20`}>
         <img src={assets.logo} alt="" />
         <ul className='hidden md:flex gap-10 text-white text-lg'>
-          <a href="#Header" className="cursor-pointer hover:text-gray-400 transition duration-200 ease-in-out">Home</a>
-          <a href="#About" className="cursor-pointer hover:text-gray-400 transition duration-200 ease-in-out">About</a>
-          <a href="#Projects" className="cursor-pointer hover:text-gray-400 transition duration-200 ease-in-out">Projects</a>
-          <a href="#Testimonials" className="cursor-pointer hover:text-gray-400 transition duration-200 ease-in-out">Testimonials</a>
+          <a href="Home" className="cursor-pointer hover:text-gray-400 transition duration-200 ease-in-out"><Link to='Header' smooth={true} offset={0} duration={500}>Home</Link></a>
+          <a href="About" className="cursor-pointer hover:text-gray-400 transition duration-200 ease-in-out"><Link to='About' smooth={true} offset={-40} duration={500}>About</Link></a>
+          <a href="Projects" className="cursor-pointer hover:text-gray-400 transition duration-200 ease-in-out"><Link to='Projects' smooth={true} offset={-130} duration={500}>Projects</Link></a>
+          <a href="Testimonials" className="cursor-pointer hover:text-gray-400 transition duration-200 ease-in-out"><Link to='Testimonials' smooth={true} offset={-100} duration={500}>Testimonials</Link></a>
         </ul>
         <button className="hidden md:block bg-white px-8 py-2 rounded-full">Sign up</button>
         <img onClick={() => setShowMobileMenu(true)} src={assets.menu_icon} alt='' className='md:hidden cursor-pointer w-7'/>
