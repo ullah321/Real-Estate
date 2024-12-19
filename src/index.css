@@ -5,10 +5,14 @@
 @tailwind utilities;
 *{
     font-family: Outfit;
-    /* scroll-behavior: smooth; */
 }
 
 .dark-nav{
     background: blueviolet;
     transition: 0.5s;
 }
+.header h2{
+    background: transparent;
+    backdrop-filter: blur(2px);
+}
+
